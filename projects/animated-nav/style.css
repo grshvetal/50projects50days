@@ -26,10 +26,11 @@ nav {
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: width 0.6s linear;
+  overflow-x: hidden;
 }
 
 nav.active {
-  width: 350px;
+  width: 400px;
 }
 
 nav ul {
@@ -61,4 +62,44 @@ nav ul a {
   color: black;
   text-decoration: none;
   margin: 0 10px;
+}
+
+.icon {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  transition: transform 0.6s linear;
+}
+
+.icon .line1 {
+  left: 5px;
+  top: 10px;
+}
+
+.icon .line2 {
+  left: 5px;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
 }
