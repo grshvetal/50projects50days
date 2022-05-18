@@ -4,7 +4,7 @@ const percentage = document.getElementById('percentage')
 const smallCups = document.querySelectorAll('.cup-small')
 
 smallCups.forEach((cup, idx) => {
-    cup.addEventListener('click', () => highlightCups(idx))
+    cup.addEventListener('click', highlightCups2)
 })
 
 function highlightCups(idx) {
@@ -19,4 +19,11 @@ function highlightCups(idx) {
             cup.classList.remove('full')
         }
     })
+}
+
+function highlightCups2() {
+    smallCups[0].classList.add('full')
+    smallCups[1].classList.add('full')
+    smallCups[2].classList.add('full')
+    smallCups[3].classList.add('full')
 }
